@@ -1,0 +1,37 @@
+\usepackage[twocolumn,landscape,a4paper,margin=15mm,columnsep=30mm]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{PTSansNarrow} 
+\usepackage[T1]{fontenc}
+\usepackage[dutch]{babel}
+\renewcommand\familydefault\sfdefault
+
+\pagestyle{empty}
+
+\definecolor{myred}{rgb}{0.92,0.11,0.15}
+\definecolor{mygray}{rgb}{0.82,0.82,0.82}
+
+\newenvironment{myquote}
+{%
+  \begin{quote}
+  \begin{picture}(0,0)\put(-20,-34){\fontsize{2cm}{1em}\selectfont\bf\color{mygray}``}\end{picture}
+  \raggedright
+}{%
+  \end{quote}
+}
+
+\newcommand\myhline{\textcolor{myred}{\rule{\columnwidth}{6pt}}}
+\newcommand\mysep{\textcolor{mygray}{\hfill$\bullet$\hfill}}
+\newcommand\mymega[1]{{\fontsize{1.15cm}{1em}\selectfont\bf#1}\par}
+\newcommand\myhuge[1]{\textcolor{red}{\Huge\bf#1}\par}
+\newcommand\mylarge[1]{\textcolor{red}{\Large\bf#1}\par}
+\newcommand\mybox[1]{\colorbox{myred}{\parbox{\columnwidth}{\centering\parbox{.95\columnwidth}{\rule{0pt}{13pt}\color{white}\large\bf#1\rule[-7pt]{0pt}{0pt}}}}}
+
+\newcommand\mytitle[2]{%
+  \includegraphics[width=.6\columnwidth]{dol_logo.png}\hfill\parbox[b]{#1}{\myhuge{#2}}\par
+  \myhline \\
+  {\bf Gaffelstraat 61B \mysep Toegang gratis \mysep Inloop: 19:30 uur \mysep Start: 20:00 uur \mysep Eind: 22:00 uur} \\
+  \myhline
+  \par\vspace{7mm}\par
+}
