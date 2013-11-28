@@ -5,6 +5,7 @@
 \usepackage{PTSansNarrow} 
 \usepackage[T1]{fontenc}
 \usepackage[dutch]{babel}
+\usepackage{array}
 \renewcommand\familydefault\sfdefault
 
 \pagestyle{empty}
@@ -17,9 +18,12 @@
   \begin{quote}
   \begin{picture}(0,0)\put(-20,-34){\fontsize{2cm}{1em}\selectfont\bf\color{mygray}``}\end{picture}
   \raggedright
+  \setlength\parindent{1.5ex}
 }{%
   \end{quote}
 }
+
+\newcommand\largeblack[2]{{\fontsize{#1}{1em}\selectfont\bf#2}\par}
 
 \newcommand\myhline{\textcolor{myred}{\rule{\columnwidth}{6pt}}}
 \newcommand\mysep{\textcolor{mygray}{\hfill$\bullet$\hfill}}
@@ -28,8 +32,9 @@
 \newcommand\mylarge[1]{\textcolor{red}{\Large\bf#1}\par}
 \newcommand\mybox[1]{\colorbox{myred}{\parbox{\columnwidth}{\centering\parbox{.95\columnwidth}{\rule{0pt}{13pt}\color{white}\large\bf#1\rule[-7pt]{0pt}{0pt}}}}}
 
-\newcommand\mytitle[2]{%
-  \includegraphics[width=.6\columnwidth]{dol_logo.png}\hfill\parbox[b]{#1}{\myhuge{#2}}\par
+\newcommand\mytitle[1]{%
+  \renewcommand\arraystretch{2}
+  \includegraphics[width=.6\columnwidth]{dol_logo.png}\hfill\begin{tabular}[b]{@{}>{\color{red}\Huge\bf}r@{}}#1\end{tabular}\par
   \myhline \\
   {\bf Gaffelstraat 61B \mysep Toegang gratis \mysep Inloop: 19:30 uur \mysep Start: 20:00 uur \mysep Eind: 22:00 uur} \\
   \myhline
