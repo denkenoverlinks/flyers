@@ -1,0 +1,61 @@
+\usepackage[twocolumn,landscape,a4paper,margin=15mm,columnsep=30mm]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{PTSansNarrow} 
+\usepackage[T1]{fontenc}
+\usepackage[dutch]{babel}
+\usepackage{array}
+\renewcommand\familydefault\sfdefault
+
+\pagestyle{empty}
+
+\renewcommand\emph[1]{{\slshape#1}}
+
+\definecolor{DolRed}{rgb}{0.92,0.11,0.15} % #eb1c26
+\definecolor{DolGray}{rgb}{0.82,0.82,0.82}
+
+\newcommand\DolHeader[1]{
+\includegraphics[width=.45\columnwidth]{dol_logo.png}\hfill\parbox[b]{.5\columnwidth}{#1}
+\DolHline \\
+{\bf Gaffelstraat 61B \DolSep Toegang gratis \DolSep Inloop: 19:30 uur \DolSep Start: 20:00 uur \DolSep Eind: 22:00 uur} \\
+\DolHline
+\vfill
+}
+
+\newcommand\DolHeaderEn[1]{
+\includegraphics[width=.45\columnwidth]{dol_logo.png}\hfill\parbox[b]{.5\columnwidth}{#1}
+\DolHline \\
+{\bf Gaffelstraat 61B \DolSep Free entrance \DolSep Doors open: \ 19:30 \DolSep Start: \ 20:00 \DolSep End: \ 22:00} \\
+\DolHline
+\vfill
+}
+
+\newcommand\DolFooter{
+\vfill
+\colorbox{DolRed}{\parbox{\columnwidth}{\ \parbox[b]{.88\columnwidth}{\color{white}\raggedright
+{\bf `Denken over links', een maandelijkse lezingenserie in het SP-pand aan
+de Gaffelstraat. Doe mee, denk mee! Iedereen is welkom.} \\[-7pt]
+\hfill denkenoverlinks.nl\\[.2em]}
+\hfill \includegraphics[scale=.4]{qr.png}}}
+}
+
+\newenvironment{DolQuote}
+{%
+  \begin{quote}
+  \begin{picture}(0,0)\put(-20,-34){\fontsize{2cm}{1em}\selectfont\bf\color{DolGray}``}\end{picture}
+  \raggedright
+  \setlength\parindent{1.5ex}
+}{%
+  \end{quote}
+}
+
+\newcommand\largeblack[2]{{\fontsize{#1}{1em}\selectfont\bf#2}\par}
+
+\newcommand\DolHline{\textcolor{DolRed}{\rule{\columnwidth}{6pt}}}
+\newcommand\DolBullet{\textcolor{DolGray}{$\bullet$}}
+\newcommand\DolSep{\hfill\DolBullet\hfill}
+\newcommand\DolMega[1]{{\fontsize{1.15cm}{1em}\selectfont\bf#1}\par}
+\newcommand\DolHuge[1]{\textcolor{DolRed}{\Huge\bf#1}\par}
+\newcommand\DolLarge[1]{\textcolor{DolRed}{\Large\bf#1}\par}
+\newcommand\DolBox[1]{\colorbox{DolRed}{\parbox{\columnwidth}{\centering\parbox{.95\columnwidth}{\rule{0pt}{13pt}\color{white}\large\bf#1\rule[-7pt]{0pt}{0pt}}}}}

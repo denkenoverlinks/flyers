@@ -1,0 +1,1 @@
+qrencode -o qr.png --background=eb1c26 --foreground=ffffff -m 0 http://www.denkenoverlinks.nl
