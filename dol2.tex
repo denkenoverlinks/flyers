@@ -4,7 +4,6 @@
 \usepackage{color}
 \usepackage{PTSansNarrow} 
 \usepackage[T1]{fontenc}
-\usepackage[dutch]{babel}
 \usepackage{array}
 \renewcommand\familydefault\sfdefault
 
@@ -16,15 +15,29 @@
 \definecolor{DolGray}{rgb}{0.82,0.82,0.82}
 
 \newcommand\DolHeader[1]{
-\includegraphics[width=.45\columnwidth]{dol_logo.png}\hfill\parbox[b]{.5\columnwidth}{#1}
+\includegraphics[width=.45\columnwidth]{dol_logo_dark.png}\hfill\parbox[b]{.5\columnwidth}{#1}
 \DolHline \\
 {\bf Gaffelstraat 61B \DolSep Toegang gratis \DolSep Inloop: 19:30 uur \DolSep Start: 20:00 uur \DolSep Eind: 22:00 uur} \\
 \DolHline
 \vfill
 }
 
+\newcommand\DolHeaderLarge[1]{
+\includegraphics[width=.45\columnwidth]{dol_logo_dark.png}\hfill\parbox[b]{.54\columnwidth}{#1}
+\DolHline \\
+{\bf Gaffelstraat 61B \DolSep Toegang gratis \DolSep Inloop 19:30 \DolSep Start 20:00 \DolSep Eind 22:00 } \\
+\DolHline
+}
+
+\newcommand\DolHeaderLargeEn[1]{
+\includegraphics[width=.45\columnwidth]{dol_logo_dark.png}\hfill\parbox[b]{.54\columnwidth}{#1}
+\DolHline \\
+{\bf Gaffelstraat 61B \DolSep Free entrance \DolSep Open 19:30 \DolSep Start 20:00 \DolSep End 22:00 } \\
+\DolHline
+}
+
 \newcommand\DolHeaderEn[1]{
-\includegraphics[width=.45\columnwidth]{dol_logo.png}\hfill\parbox[b]{.5\columnwidth}{#1}
+\includegraphics[width=.45\columnwidth]{dol_logo_dark.png}\hfill\parbox[b]{.5\columnwidth}{#1}
 \DolHline \\
 {\bf Gaffelstraat 61B \DolSep Free entrance \DolSep Doors open: \ 19:30 \DolSep Start: \ 20:00 \DolSep End: \ 22:00} \\
 \DolHline
@@ -40,6 +53,22 @@ de Gaffelstraat. Doe mee, denk mee! Iedereen is welkom.} \\[-7pt]
 \hfill \includegraphics[scale=.4]{qr.png}}}
 }
 
+\newcommand\DolFooterLarge{
+\vfill
+\colorbox{DolRed}{\parbox{\columnwidth}{\ \ \ \parbox[b]{.84\columnwidth}{\color{white}\raggedright
+{\bf `Denken over links', een maandelijkse lezingenserie in het SP-pand aan
+de Gaffelstraat. Kom langs en denk mee!} \hfill denkenoverlinks.nl \\[4pt]}
+\hfill \includegraphics[scale=.45]{qr.png}}}
+}
+
+\newcommand\DolFooterLargeEn{
+\vfill
+\colorbox{DolRed}{\parbox{\columnwidth}{\ \ \ \parbox[b]{.84\columnwidth}{\color{white}\raggedright
+{\bf `Denken over links' is a monthly lecture series in the SP rooms in Gaffelstraat.
+Come along and be left thinking!} \hfill denkenoverlinks.nl \\[4pt]}
+\hfill \includegraphics[scale=.45]{qr.png}}}
+}
+
 \newenvironment{DolQuote}
 {%
   \begin{quote}
@@ -50,7 +79,7 @@ de Gaffelstraat. Doe mee, denk mee! Iedereen is welkom.} \\[-7pt]
   \end{quote}
 }
 
-\newcommand\largeblack[2]{{\fontsize{#1}{1em}\selectfont\bf#2}\par}
+\newcommand\largeblack[2]{{\fontsize{#1}{1em}\selectfont#2}\par}
 
 \newcommand\DolHline{\textcolor{DolRed}{\rule{\columnwidth}{6pt}}}
 \newcommand\DolBullet{\textcolor{DolGray}{$\bullet$}}
